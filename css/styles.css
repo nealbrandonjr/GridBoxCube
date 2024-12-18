@@ -1,0 +1,94 @@
+/* Reset default margins and hide overflow to prevent scrollbars */
+body {
+    margin: 0; /* Remove default body margins */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Header container at top of page */
+#header {
+    position: absolute; /* Position the header relative to the top-left corner */
+    top: 0; /* Align the header to the top of the viewport */
+    width: 100%; /* Make the header span the full width of the page */
+    background-color: white; /* White background for header */
+    color: black; /* Black text color */
+    font-family: Monospace; /* Use Monospace font for header text */
+    z-index: 5; /* Ensure the header stays above other elements */
+    text-align: center; /* Center-align the text inside the header */
+    padding: 10px 0; /* Add vertical padding inside the header */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Individual info text within the header */
+#header div {
+    margin: 5px 0; /* Add spacing between lines */
+}
+
+/* Frame for the console at bottom of screen */
+#consoleFrame {
+    position: fixed; /* Position the console frame fixed at the bottom of the viewport */
+    bottom: 50px; /* Leave a 50px gap from the bottom of the viewport */
+    left: 0; /* Align to the left edge of the viewport */
+    width: 100%; /* Make the console frame span the full width of the page */
+    height: 40px; /* Set a collapsed height of 40px */
+    background: black; /* Set a black background for the console frame */
+    border-top: 2px solid gray; /* Add a gray top border */
+    transition: height 0.3s; /* Smooth height transition when expanded */
+    z-index: 10000; /* Ensure the console frame is above all other elements */
+}
+
+/* The console display area */
+#console {
+    position: absolute; /* Position relative to its containing element */
+    bottom: 40px; /* Position just above the console tab */
+    left: 0; /* Align to the left edge of the containing element */
+    width: 100%; /* Make the console span the full width */
+    max-height: 200px; /* Limit the maximum height to 200px */
+    background: black; /* Black background for the console */
+    color: lime; /* Lime green text for contrast */
+    overflow: auto; /* Add scrollbars if the content exceeds max-height */
+    display: none; /* Hide the console by default */
+    padding: 10px; /* Add padding inside the console */
+    box-sizing: border-box; /* Include padding in total dimensions */
+}
+
+/* Tab used to toggle the console visibility */
+#consoleTab {
+    position: absolute; /* Position relative to the console frame */
+    top: -40px; /* Positioned above console frame */
+    right: 0; /* Align the tab to the right edge of the frame */
+    width: 80px; /* Set the tab width */
+    height: 40px; /* Set the tab height */
+    background: gray; /* Gray background for the tab */
+    color: white; /* White text for visibility */
+    text-align: center; /* Center-align the text horizontally */
+    line-height: 40px; /* Vertically align the text */
+    cursor: pointer; /* Change the cursor to a pointer to indicate interactivity */
+    user-select: none; /* Prevent text selection */
+}
+
+/* Footer at bottom of page */
+#license-footer {
+    position: fixed; /* Position fixed at the bottom of the viewport */
+    bottom: 0; /* Align the footer to the bottom edge */
+    width: 100%; /* Make the footer span the full width of the page */
+    background-color: black; /* Black background for the footer */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center-align the text inside the footer */
+    padding: 5px 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the total dimensions */
+    font-family: Arial, sans-serif; /* Use Arial font with a fallback */
+    font-size: 12px; /* Set font size to 12px */
+    z-index: 9999; /* Ensure the footer stays above most elements */
+    white-space: normal; /* Allow the text to wrap to the next line */
+}
+
+/* Links inside the footer */
+#license-footer a {
+    color: white;  /* Set link text color to white */
+    text-decoration: underline; /* Underline the links by default */
+}
+
+/* Hover effect for footer links */
+#license-footer a:hover {
+    text-decoration: none; /* Remove underline when hovering */
+}
